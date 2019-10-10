@@ -8,4 +8,9 @@ class Post extends Model
 {
     //
     protected $fillable = ["title","body"];
+
+    //複数のコメントが紐づくのでコメンツにする
+    public function comments(){
+        return $this->hasMany('App\Comment');
+    }
 }
