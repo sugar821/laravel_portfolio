@@ -9,7 +9,8 @@ class PostsController extends Controller
 {
     //
     public function index(){
-        $posts = Post::latest()->get();
+        // $posts = Post::latest()->get();
+        $posts =  Post::paginate(5);
         // dd($posts->toarray()); //dump die
         // return view('posts.index', ['posts' => $posts]);
         return view('posts.index')->with('posts' , $posts);

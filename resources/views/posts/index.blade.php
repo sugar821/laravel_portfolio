@@ -20,4 +20,5 @@
       <li>no posts</li>
     @endforelse
     <script src="/js/main.js"></script>
+    {!! $posts->render() !!}
 @endsection
